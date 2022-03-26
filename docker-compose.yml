@@ -13,6 +13,14 @@ services:
     volumes:
       - ./backend/:/backend
 
+  frontend:
+    build:
+      context: frontend
+    tty: true
+    volumes:
+      - ./frontend:/code
+      - /code/node_modules
+
   nginx:
     image: nginx:1.21.6-alpine
     volumes:
@@ -21,4 +29,4 @@ services:
       - "8000:80"
     depends_on:
       - backend
-      # - frontend
+      - frontend
