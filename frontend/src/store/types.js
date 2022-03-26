@@ -1,0 +1,7 @@
+export const LOGOUT = 'LOGOUT';
+export const SET_CSRF_TOKEN = 'SET_CSRF_TOKEN';
+export const REMOVE_CSRF_TOKEN = 'REMOVE_CSRF_TOKEN';
+export const SET_USERNAME = 'SET_USERNAME';
+export const REMOVE_USERNAME = 'REMOVE_USERNAME';
+export const SET_PASSWORD = 'SET_PASSWORD';
+export const REMOVE_PASSWORD = 'REMOVE_PASSWORD';
