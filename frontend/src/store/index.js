@@ -46,9 +46,7 @@ export default createStore({
   },
   actions: {
     getCSRF({ commit }) {
-      // I've probably convoluted this a bit by using a callback? But I need the auth area to make the 
-      // API call to keep API setup in one place.
-      auth.getCSRFToken(commit, SET_CSRF_TOKEN);
+      auth.getCSRFToken((token) => { commit(SET_CSRF_TOKEN, token); });
     },
     logout({ commit }) {
       auth.logout();
