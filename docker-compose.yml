@@ -1,0 +1,16 @@
+version: "3.9"
+   
+services:
+  backend:
+    build:
+      context: backend
+    tty: true
+    entrypoint: python manage.py runserver 0.0.0.0:8000
+    environment:
+      - PORT=8000
+      - SECRET_KEY=ThisShouldBeSecret
+      - DEBUG=True
+    volumes:
+      - ./backend/:/backend
+    ports:
+      - 8000:8000
